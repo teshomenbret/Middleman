@@ -18,11 +18,16 @@ The application will utilize a database of items that are to be entered by us or
 
 So we will authorize our first users aka companies to have full CRUD functionalities for their item lists. That means they can **CREATE** new items, **UPDATE** existing items in the list, **DELETE** items that are no longer available and last but not least they obviously can **READ** the list of items. However, one company can only manage their own list. We carefully authenticate this so that they will be no way near interfering with our companies.
 
-We have only given the other users, i.e. our customers full CRUD functionality only once when they create their accounts and/or when they potentially delete their accounts. But beyond that they have only **READ** privileges to see the list of available companies providing the items they seek to be provided.
+We have given the other users, i.e. our customers full CRUD functionality once when they create their accounts and/or when they potentially delete their accounts. But beyond that they have only **READ** privileges to see the list of available companies providing the items they seek to be provided.
 
 ### Authentication Features
 
 The two users of this platform are required to *register* before using the application business features. So that they can *login* to the system independently and do their work as per their privileges in a hassle free manner. They can logout temporarily from the app and login again. Additionally, if either the company or the customers are not satisfied by our care they can delete their accounts permanently and their related data.
+
+## Business Features
+
+1. Providing information regarding the type, price and such kinds of information of ***items*** provided by some company for our customers.
+2. 
 
 ## Contributors
 1. Surafel Getahun Aragaw - UGR/5965/12
