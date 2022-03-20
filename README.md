@@ -30,7 +30,7 @@ The two users of this platform are required to *register* before using the appli
 
 ## Business Features
 
-1. Customers will be able to get the appropriate information like the type, price and number of ***items*** provided by some specific company of interest.
+1. Customers will be able to get the appropriate information like the type, price and number of ***items*** provided by some specific company.
 2. ***Companies*** providing the right kind of informations related to the items they possess.
 
 ## Contributors
