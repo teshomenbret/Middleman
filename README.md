@@ -26,7 +26,7 @@ The administrators will manage companies so they have full CRUD functionaities o
 
 ### Authentication Features
 
-The two users of this platform are required to *register* before using the application business features. So that they can *login* to the system independently and do their work as per their privileges in a hassle free manner. They can logout temporarily from the app and login again. Additionally, if either the company or the customers are not satisfied by our care they can delete their accounts permanently and their related data.
+The two users of this platform are required to *register* before using the application business features. So that they can *login* to the system independently and do their work as per their privileges in a hassle free manner. They can *logout* temporarily from the app and login again. Additionally, if either the company or the customers are not satisfied by our care they can *delete their accounts* permanently and their related data.
 
 ## Business Features
 
