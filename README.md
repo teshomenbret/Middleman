@@ -2,7 +2,7 @@
 ## Brief Description
 This app is believed to be some kind of connector between rental service providers as shop centers and customers. So as anyone can guess, there are two types of users:
 * Companies as service providers with administrative privileges
-* Customers as served users with minimal privileges
+* Customers as served users with minimal privileges    
 For our admin users, it will be capable of calculating different types of sales transactions and will be able to generate a summary based on the initial prices of information that is set b8y themselves beforehand.    
 For our second users aka customers, the system should provide with the appropriate information like the list of companies that have already partnered with our platform with a respective summary, and the list of items provided by each institution for renting.
 The application is cross-platform and will be functional both in android and iOS. The application will only need an internet connection and a smartphone to operate and nothing else. 
