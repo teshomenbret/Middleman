@@ -1,4 +1,4 @@
-package com.middleman.middle_man.controller;
+package com.middleman.middle_man.resource;
 import java.util.*;
 import com.middleman.middle_man.service.CompanyService;
 import com.middleman.middle_man.model.Company;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/companies")
-public class CompanyController {
+public class CompanyResource {
     @Autowired
     private CompanyService companyService;
 
