@@ -21,15 +21,16 @@ public class Item {
      private float unitPrice;
      private int quantity;
      
-     private Type type;
+    //  private Type type;
 
 
-    public static enum Type {
-        CONSTRUCTION,ELECTRONICS,HOUSING
+    // public static enum Type {
+    //     CONSTRUCTION,ELECTRONICS,HOUSING
 
-    }
-    @JoinColumn(name="comp_id")
+    // }
+   
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="comp_id")
     private Company company;
 
     
