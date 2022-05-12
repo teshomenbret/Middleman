@@ -3,18 +3,16 @@ import java.util.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
- 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.middleman.middle_man.repository.AddressRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -41,8 +39,9 @@ public class Company   {
     // Description description;
     // Address address;
     // @OneToOne(fetch = FetchType.LAZY)
-    @OneToMany(mappedBy = "company",cascade = CascadeType.ALL)
-    private List<Address>addresses;
+
+    @Embedded
+    private Address companyAddress;
     
     
 
