@@ -6,13 +6,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
- 
- 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+ 
 
-@Entity
+@JsonIgnoreType
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Item {
      @Id
      @GeneratedValue
@@ -28,7 +35,7 @@ public class Item {
     //     CONSTRUCTION,ELECTRONICS,HOUSING
 
     // }
-   
+ 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="comp_id")
     private Company company;
