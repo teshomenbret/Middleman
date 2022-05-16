@@ -1,7 +1,6 @@
 package com.middleman.middle_man.model;
 
 import javax.persistence.Embeddable;
-
 import lombok.Data;
 
 @Embeddable
