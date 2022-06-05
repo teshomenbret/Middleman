@@ -1,8 +1,10 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:middle_man_frontend/presentation/routes/routes.dart';
 
 class CompanyProfile extends StatelessWidget {
-  const CompanyProfile({Key ?key}) : super(key: key);
+  const CompanyProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +78,9 @@ class CompanyProfile extends StatelessWidget {
                           const Color.fromARGB(255, 19, 10, 200)),
                       elevation: MaterialStateProperty.all(10),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go(Routes.company);
+                    },
                     child: const Text(
                       'Save changes',
                       style:

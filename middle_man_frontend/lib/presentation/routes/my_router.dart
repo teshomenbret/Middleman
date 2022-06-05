@@ -13,7 +13,6 @@ import '../../application/auth/logIn/bloc/login_bloc.dart';
 import '../../application/auth/logIn/bloc/login_event.dart';
 import '../../application/auth/logIn/bloc/login_state.dart';
 import '../Item.dart';
-import '../company/logInUser.dart';
 import '../user/UserHomePage.dart';
 import '../user/UserProfile.dart';
 
