@@ -19,23 +19,22 @@ public class CompanyService {
     private CompanyRepository companyRepository;
 
     public List<Company> getCompanies(){
-       log.info("");
        return  (List<Company>)companyRepository.findAll();
     }
 
     public Company save(Company company){
-      log.info("Saving new company {} to the databas", company.toString());
+      log.info("Saving new company {} to the database", company.toString());
        return companyRepository.save(company);
     }
 
     public Company findByName(String name){
          return companyRepository.getByName(name);      
     }
-    public void deleteById(Long id){
+    public void deleteById(String id){
      companyRepository.deleteById(id);
 }
 
-   public Optional<Company> findById(Long id) {
+   public Optional<Company> findById(String id) {
       return companyRepository.findById(id);
    }
 
