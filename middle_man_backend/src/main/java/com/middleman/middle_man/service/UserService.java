@@ -30,7 +30,7 @@ public class UserService implements UserDetailsService  {
         return (List<User>) userRepository.findAll();
     }
 
-    public Optional<User> getUser(Long id){
+    public Optional<User> getUser(String id){
         return userRepository.findById(id);
     }
 
@@ -39,7 +39,7 @@ public class UserService implements UserDetailsService  {
          return userRepository.save(user);
       }
 
-    public void deleteById(Long id){
+    public void deleteById(String id){
         userRepository.deleteById(id);
    }
     

@@ -2,9 +2,9 @@ package com.middleman.middle_man.resource;
 
 import java.util.*;
 import com.middleman.middle_man.service.UserService;
-import com.middleman.middle_man.model.Role;
+// import com.middleman.middle_man.model.Role;
 import com.middleman.middle_man.model.User;
-import com.middleman.middle_man.repository.RoleRepository;
+// import com.middleman.middle_man.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,9 +23,6 @@ public class UserResource {
     @Autowired
     private UserService userService;
  
-    @Autowired
-    private RoleRepository roleRepository;
-   
 
     @GetMapping("/users")
     public List<User> findAllUsers(){
@@ -33,7 +30,7 @@ public class UserResource {
     }
 
     @GetMapping("/users/{id}")
-    public User getUser(@PathVariable Long id){
+    public User getUser(@PathVariable String id){
         Optional<User> user = userService.getUser(id);
         if(user.isPresent()){
             return user.get();
@@ -44,24 +41,39 @@ public class UserResource {
     // TODO 
     // change the for loop by java stream api
     @PostMapping("/users")
-    public User createCompany(@RequestBody User user){
-        Collection<Role> roles = user.getRoles();
-        for(Role role :roles){
-            roleRepository.save(role);
-        }
+    public User createUser(@RequestBody User user){
+        // Collection<String> roles = user.getRoles();
+        // for(Role role :roles){
+        //     roleRepository.save(role);
+        // }
         return userService.save(user);
+
+    }
+
+    @PostMapping("/users/role")
+    public User updateUserRole(@RequestBody User user){
+        Optional<User> use = userService.getUser(user.getId());
+        if(use.isPresent()){
+            User us = use.get();
+            us.setRoles(user.getRoles());
+            return userService.save(us);
+        }
+
+        return null;
+        
+       
 
     }
 
     // TODO 
     // tink about its implementation(better)
    @PutMapping("/users")
-       public User updateComapny(@RequestBody User user){
+       public User updateUser(@RequestBody User user){
            return userService.save(user);
        }
 
     @DeleteMapping("/users/{id}")
-    public void deleteCompany(@PathVariable Long id){
+    public void deleteUser(@PathVariable String id){
         userService.deleteById(id);
     }
   

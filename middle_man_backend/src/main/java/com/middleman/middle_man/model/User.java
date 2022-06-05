@@ -11,52 +11,48 @@ import javax.persistence.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.*;
 
 import lombok.Data;
 
 @Entity
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
     private Gender gender;
 
 
     private String username;
     private String password;
     private boolean enabled = true;
+    private Date created_Date = new Date(System.currentTimeMillis());
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private Collection<Role> roles = new ArrayList<>();
+    // @OneToMany(fetch = FetchType.EAGER)
+    private String roles ;
 
     // TODO 
     // why not we list the fild in the Fullname here ? 
-    @Embedded
-    private Fullname fullName;
-
-    @Embedded
-    private  Address address;
+    private String firstName;
+    private String lastName;
+    private String email;
 
 
     public enum Gender {
         MALE, FEMALE; 
     }
 
-    public void addRole(Role role) {
-        this.roles.add(role);
-    }
-
-    // TODO
-    // replathe the for loop with JAVA STREAM API
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        for(Role role :this.roles){
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
-        }
+      
+            authorities.add(new SimpleGrantedAuthority(this.roles));
+        
         return authorities;
     }
 
@@ -65,18 +61,15 @@ public class User implements UserDetails {
         return this.enabled;
     }
 
-
     @Override
     public boolean isAccountNonLocked() {
         return enabled;
     }
 
-
     @Override
     public boolean isCredentialsNonExpired() {
         return this.enabled;
     }
-
 
     @Override
     public boolean isEnabled() {
