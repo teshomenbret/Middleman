@@ -5,8 +5,8 @@ import org.springframework.stereotype.Repository;
 import com.middleman.middle_man.model.User;
 
 @Repository
-public interface UserRepository extends CrudRepository<User,Long>{
+public interface UserRepository extends CrudRepository<User, String>{
 
-    User findByUsername(String username);
+    User findByUsername(String userName);
     
 }
