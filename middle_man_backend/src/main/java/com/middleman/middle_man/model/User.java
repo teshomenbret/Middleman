@@ -33,11 +33,9 @@ public class User implements UserDetails {
     private boolean enabled = true;
     private Date created_Date = new Date(System.currentTimeMillis());
 
-    // @OneToMany(fetch = FetchType.EAGER)
+    
     private String roles ;
 
-    // TODO 
-    // why not we list the fild in the Fullname here ? 
     private String firstName;
     private String lastName;
     private String email;
