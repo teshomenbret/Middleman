@@ -42,6 +42,7 @@ dependencies:
   kt_dart: ^0.10.0
   sqflite: ^2.0.2+1
   path_provider: ^2.0.10
+  bloc: ^8.0.3
 
 dev_dependencies:
   flutter_test:
