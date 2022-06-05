@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:middle_man_frontend/application/auth/logIn/bloc/login_bloc.dart';
 import 'package:middle_man_frontend/presentation/routes/routes.dart';
+import 'application/auth/logIn/bloc/login_event.dart';
 import 'application/auth/logIn/bloc/login_state.dart';
 
 // ignore: must_be_immutable
@@ -89,8 +90,8 @@ class LandingPage extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
                   onPressed: () {
-                    // BlocProvider.of<LoginBloc>(context)
-                    //     .add(const LoginEventPressed());
+                    BlocProvider.of<LoginBloc>(context)
+                        .add(const LoginEventPressed());
                     context.go(Routes.signIn);
                   }),
             ),

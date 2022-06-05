@@ -25,11 +25,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       var result = await _authRepository.registerAs(user: event.user);
       print(result);
 
-      // if (result.isLeft()) {
-      //   emit(left(result));
-      // } else {
-      //   emit(right(result));
-      // }
+      
     }));
   }
 }

@@ -10,8 +10,5 @@ class ItemFormEvent with _$ItemFormEvent {
   const factory ItemFormEvent.read() = ItemFormEventRead;
   const factory ItemFormEvent.update(Item item) = ItemFormEventUpdate;
   const factory ItemFormEvent.delete(Item item) = ItemFormEventDelete;
-  // const factory ItemFormEvent.initialized(Option<Item> initialNoteOption) =
-  //     _Initialized;
-  // const factory ItemFormEvent.nameChanged(String nameStr) = _NameChanged;
-  // const factory ItemFormEvent.saved() = _Saved;
+ 
 }

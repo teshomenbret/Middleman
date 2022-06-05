@@ -76,7 +76,7 @@ class _SignUpUserState extends State<SignUpUser> {
         padding:
             const EdgeInsets.only(left: 60, right: 60, bottom: 30, top: 100),
         child: Form(
-            // key: _formKey,
+            
             child: ListView(
           children: [
             const Padding(
