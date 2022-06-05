@@ -1,43 +1,42 @@
 package com.middleman.middle_man.model;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import java.util.List;
+import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
- 
+
 
 @JsonIgnoreType
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
-     @Id
-     @GeneratedValue(strategy = GenerationType.AUTO)
-     private long id;
+    @Id
+    private String id;
      private String name;
-     private float price;
-     private int quantity;
+     private String price;
+     private String quantity;
+     private String photo;
+     private Date created_Date = new Date(System.currentTimeMillis());
      
     // TODO  decide about this filed 
-    //  private Type type;
-    // public static enum Type {
-    //     CONSTRUCTION,ELECTRONICS,HOUSING
+    private Type type;
 
-    // }
+    public static enum Type {
+        CONSTRUCTION,ELECTRONICS,HOUSING, OTHER
+    }
  
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="comp_id")
-    private Company company;
+    private String  companyId;
 
     
 }
