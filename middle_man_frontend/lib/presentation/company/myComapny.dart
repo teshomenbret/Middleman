@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo/presentation/Item.dart';
+import 'package:middle_man_frontend/presentation/Item.dart';
 import 'companyDetail.dart';
 import 'companyProfile.dart';
 
@@ -48,8 +48,10 @@ class _MyComapnyState extends State<MyComapny> {
               title: const Text("PROFILE",
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold)),
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) =>const  CompanyProfile())),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const CompanyProfile())),
             ),
             ListTile(
               title: const Text(
