@@ -1,14 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:middle_man_frontend/application/item/bloc/item_form_event.dart';
 import 'package:dartz/dartz.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:middle_man_frontend/application/item/bloc/item_form_state.dart';
 import 'package:middle_man_frontend/domain/item/item_failure.dart';
 
 import '../../../domain/item/i_item_repository.dart';
 import '../../../infrastructure/data/sqlite/sqlite_repository.dart';
 import '/domain/item/item.dart';
-import '../../../domain/item/value_objects.dart';
+ 
 
 class ItemFormBloc extends Bloc<ItemFormEvent, ItemFormState> {
   final IItemRepository _itemRepository;

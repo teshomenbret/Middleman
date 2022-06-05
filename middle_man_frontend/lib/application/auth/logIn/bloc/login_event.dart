@@ -1,21 +1,6 @@
-// part of 'login_bloc.dart';
-
-
-
-
-
-
-
-// @freezed
-// class LoginEvent with _$LoginEvent {
-
-//   const factory LoginEvent.userNameChanged(String emailStr) = UserNameChanged;
-//   const factory LoginEvent.passwordChanged(String passwordStr) =PasswordChanged;
-//   const factory LoginEvent.logInPressed() =LogInPressed;
-
-// }
+ 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:todo/domain/auth/user.dart';
+import 'package:middle_man_frontend/domain/auth/user.dart';
  
 
 part 'login_event.freezed.dart';

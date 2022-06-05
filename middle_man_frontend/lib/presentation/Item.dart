@@ -3,14 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:middle_man_frontend/application/item/bloc/item_form_bloc.dart';
 import 'package:middle_man_frontend/application/item/bloc/item_form_event.dart';
 
-import '../application/item/bloc/item_form_state.dart';
+ 
 import '../domain/core/value_objects.dart';
-import '../domain/item/i_item_repository.dart';
+ 
 import '../domain/item/item.dart';
 import '../domain/item/value_objects.dart';
-import '../infrastructure/data_provider/item/item_remote_data_provider.dart';
-import '../infrastructure/repositories/items/item_repository.dart';
-
+ 
 class Iteme extends StatefulWidget {
   const Iteme({
     Key? key,
@@ -130,8 +128,7 @@ class _ItemeState extends State<Iteme> {
                                     );
                                   }
 
-                                  // Navigator.push(context,
-                                  //     MaterialPageRoute(builder: (context) => LogIn()));
+                                
                                   )))
                     ])))));
   }

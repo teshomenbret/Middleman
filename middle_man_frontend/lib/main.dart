@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:middle_man_frontend/domain/item/i_item_repository.dart';
-import 'package:middle_man_frontend/presentation/Item.dart';
 import 'package:middle_man_frontend/presentation/routes/my_router.dart';
-import 'package:middle_man_frontend/presentation/user/registerUser.dart';
 import 'application/auth/logIn/bloc/login_bloc.dart';
 import 'application/auth/logIn/bloc/login_state.dart';
 import 'application/item/bloc/item_form_bloc.dart';
@@ -11,15 +8,12 @@ import 'infrastructure/data_provider/auth/auth_data_rovider.dart';
 import 'infrastructure/data_provider/item/item_remote_data_provider.dart';
 import 'infrastructure/repositories/auth/auth_repository.dart';
 import 'infrastructure/repositories/items/item_repository.dart';
-import 'landing.dart';
-import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'middleman_bloc_observer.dart';
 
 void main() async {
   BlocOverrides.runZoned(
     () => runApp(const MyApp()),
-    blocObserver: middle_man_frontendBlocObserver(),
+    blocObserver: MiddleBlocObserver(),
   );
 }
 

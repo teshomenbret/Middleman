@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:middle_man_frontend/application/auth/logIn/bloc/login_bloc.dart';
-import 'package:middle_man_frontend/presentation/company/registerComapny.dart';
 import 'package:middle_man_frontend/presentation/routes/routes.dart';
-import 'package:middle_man_frontend/presentation/user/registerUser.dart';
-
-import 'application/auth/logIn/bloc/login_event.dart';
 import 'application/auth/logIn/bloc/login_state.dart';
 
 // ignore: must_be_immutable
