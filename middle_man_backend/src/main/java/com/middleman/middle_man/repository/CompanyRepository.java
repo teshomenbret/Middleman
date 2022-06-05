@@ -5,8 +5,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CompanyRepository extends CrudRepository<Company,Long> {
-public boolean existsByName(String compName);
-public Company getByName(String compName);
+public interface CompanyRepository extends CrudRepository<Company,String> {
+public boolean existsByName(String name);
+public Company getByName(String name);
     
 }

@@ -27,7 +27,7 @@ public class CompanyResource {
     }
 
     @GetMapping("/companies/{id}")
-    public Company getCompany(@PathVariable Long id){
+    public Company getCompany(@PathVariable String id){
         Optional<Company> company = companyService.findById(id);
         if(company.isPresent()){
             return company.get();
@@ -49,7 +49,7 @@ public class CompanyResource {
        }
 
     @DeleteMapping("/companies/{id}")
-    public void deleteCompany(@PathVariable Long id){
+    public void deleteCompany(@PathVariable String id){
         companyService.deleteById(id);
     }
   
