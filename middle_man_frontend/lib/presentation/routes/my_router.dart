@@ -4,12 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:middle_man_frontend/landing.dart';
+import 'package:middle_man_frontend/presentation/company/companyDetail.dart';
 import 'package:middle_man_frontend/presentation/routes/routes.dart';
 import 'package:middle_man_frontend/presentation/user/registerUser.dart';
 import 'package:middle_man_frontend/presentation/user/userLogIn.dart';
- 
 
- 
 import '../../application/auth/logIn/bloc/login_bloc.dart';
 import '../../application/auth/logIn/bloc/login_event.dart';
 import '../../application/auth/logIn/bloc/login_state.dart';
@@ -89,11 +88,16 @@ class App extends StatelessWidget {
             path: Routes.signIn,
             builder: (context, state) => LogIn(),
           ),
+          GoRoute(
+            path: Routes.editProfile,
+            builder: (context, state) => const UserProfile(),
+          ),
+          GoRoute(
+            path: Routes.company,
+            builder: (context, state) => CompanyDetail(),
+          ),
         ]);
-    // GoRoute(
-    //   path: Routes.postQuestion,
-    //   builder: (context, state) => const PostQuestionScreen(),
-    // ),
+
     // GoRoute(
     //   path: '${Routes.editQuestion}/:qid',
     //   builder: (context, state) {

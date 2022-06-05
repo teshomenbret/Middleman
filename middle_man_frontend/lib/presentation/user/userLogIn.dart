@@ -1,16 +1,15 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+ 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:middle_man_frontend/application/auth/logIn/bloc/login_bloc.dart';
 import 'package:middle_man_frontend/domain/auth/user.dart';
 import 'package:middle_man_frontend/domain/auth/value_objects.dart';
 import 'package:middle_man_frontend/presentation/routes/routes.dart';
-import 'package:middle_man_frontend/presentation/user/UserHomePage.dart';
-import 'package:middle_man_frontend/presentation/user/registerUser.dart';
+ 
 import '../../application/auth/logIn/bloc/login_event.dart';
-import '../company/myComapny.dart';
+ 
 
 // ignore: use_key_in_widget_constructors
 class LogIn extends StatelessWidget {
@@ -69,7 +68,7 @@ class LogIn extends StatelessWidget {
                         ),
                         onPressed: () {
                           context.go(Routes.boarding);
-                          //     MaterialPageRoute(builder: (context) => LogIn())
+                         
                           var form = Auth(
                             username: Name(firstController.text),
                             password: Password(secondController.text),
@@ -80,10 +79,7 @@ class LogIn extends StatelessWidget {
                             LoginEventLogin(form),
                           );
 
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => const MyUser()));
+                          
                         }))),
             Padding(
               padding: const EdgeInsets.only(left: 2, right: 10, top: 10),
